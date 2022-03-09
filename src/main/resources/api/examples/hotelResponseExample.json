@@ -1,0 +1,20 @@
+[
+    {
+        "city": "Delhi",
+        "hotelName": "Taaj",
+        "numberOfRooms": "2",
+        "checkInDate": "2020-06-10",
+        "checkOutDate": "2020-06-15",
+        "roomType": "AC",
+        "price": 1500
+    },
+    {
+        "city": "Patna",
+        "hotelName": "Mariut",
+        "numberOfrooms": "2",
+        "checkInDate": "2020-06-10",
+        "checkOutDate": "2020-06-15",
+        "roomType": "Delux",
+        "price": 1000
+    }
+]

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="hawa-holiday-hotel-impFlow" doc:id="762074d9-e724-49dc-9933-1b15d306f01b" >
+		<logger level="INFO" doc:name="Start_Logger" doc:id="92dbf242-0f65-4b02-9b52-d55bc8251e54" message="Start flow"/>
+		<ee:transform doc:name="Hotel_Avaibilility_response" doc:id="f293a4b0-9529-451d-bf5d-d8b25900e961" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+[
+    {
+        "city": "Delhi",
+        "hotelName": "Taaj",
+        "numberOfRooms": "2",
+        "checkInDate": "2020-06-10",
+        "checkOutDate": "2020-06-15",
+        "roomType": "AC",
+        "price": 1500
+    },
+    {
+        "city": "Patna",
+        "hotelName": "Lemmom Tree",
+        "numberOfrooms": "2",
+        "checkInDate": "2020-06-10",
+        "checkOutDate": "2020-06-15",
+        "roomType": "NON-AC",
+        "price": 1000
+    }
+]]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="End_Logger" doc:id="1463c600-65d4-4047-9002-5f1f2e3f207b" message="End flow"/>
+	</flow>
+</mule>

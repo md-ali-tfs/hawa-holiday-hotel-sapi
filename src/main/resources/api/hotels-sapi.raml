@@ -1,0 +1,12 @@
+#%RAML 1.0
+title: hawa-hotels-sapi
+traits:
+  queryParams: !include exchange_modules/388ecbd3-cec3-4134-850c-90702ea852d9/commontypes/1.0.1/commonQuery.raml
+/hotelbooking:
+  is: [queryParams]
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/hotelResponseExample.json
